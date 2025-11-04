@@ -14,7 +14,7 @@ mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.error('MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
-  res.send('Willkommen zur Reise Planer App API!');
+  res.send('Willkommen zur Reiseplaner App API!');
 });
 
 app.listen(PORT, () => {
