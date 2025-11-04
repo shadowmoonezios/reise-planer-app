@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'UP' });
+  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
 });
 
 app.listen(PORT, () => {
