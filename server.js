@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Reiseplaner App API!');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'UP' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
